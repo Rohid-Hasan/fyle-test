@@ -1,0 +1,26 @@
+<div class="text-center justify-content-center p-5">
+  <h1 class="text-center text-warn">Enter Github Username</h1>
+  <form (submit)="onSubmit(form)" #form="ngForm">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label> Username </mat-label>
+      <input
+        type="text"
+        name="userName"
+        matInput
+        required
+        ngModel
+        autocomplete="off"
+      />
+      <mat-error> Username can not be empty </mat-error>
+    </mat-form-field>
+    <button
+      color="primary"
+      type="submit"
+      mat-flat-button
+      [disabled]="!form.valid"
+      class="px-5"
+    >
+      Submit
+    </button>
+  </form>
+</div>

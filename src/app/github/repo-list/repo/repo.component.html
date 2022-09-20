@@ -1,0 +1,14 @@
+<mat-card class="m-1 p-3">
+  <mat-card-title>{{ repo.title }}</mat-card-title>
+  <mat-card-subtitle>{{ repo.subTitle }}</mat-card-subtitle>
+  <mat-card-actions>
+    <button
+      *ngFor="let language of repo.languages"
+      mat-flat-button
+      color="primary"
+      class="px-2 m-1"
+    >
+      {{ language }}
+    </button>
+  </mat-card-actions>
+</mat-card>

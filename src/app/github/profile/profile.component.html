@@ -1,0 +1,20 @@
+<div class="row" *ngIf="userProfileData && !isLoading">
+  <div class="col-xl-3 col-md-4 col-sm-12">
+    <img [src]="userProfileData.imageUrl" class="rounded-circle" />
+  </div>
+  <div class="col-xl-3 col-md-4 col-sm-12">
+    <h1 class="text-muted">{{ userProfileData.name }}</h1>
+    <p>
+      <strong
+        ><span class="text-muted">{{ userProfileData.bio }}</span></strong
+      >
+    </p>
+    <p><mat-icon> location_on</mat-icon> {{ userProfileData.location }}</p>
+    <p>
+      <strong>{{ userProfileData.twitterLink }}</strong>
+    </p>
+  </div>
+  <p>{{ userProfileData.profileUrl }}</p>
+</div>
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
